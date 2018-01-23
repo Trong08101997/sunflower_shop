@@ -1,0 +1,9 @@
+maximum_length:
+  name: 50
+  email: 255
+  phone: 20
+  address: 255
+minimum_length:
+  password: 6
+  phone: 3
+perpage: 5

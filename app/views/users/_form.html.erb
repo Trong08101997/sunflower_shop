@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@user) do |f| %>
+      <%= render "shared/error_messages" %>
+      <%= f.label t"views.users.name"%>
+      <%= f.text_field :name, class: "form-control", placeholder: t("views.users.Enter_user_name")%>
+
+      <%= f.label t"views.users.email"%>
+      <%= f.email_field :email, class: "form-control", placeholder: t("views.users.Enter_email")%>
+
+      <%= f.label t"views.users.address"%>
+      <%= f.text_field :address, class: "form-control", placeholder: t("views.users.Enter_address")%>
+
+      <table>
+      <th for="user_sex"><%= t"views.users.Sex" %></th>
+        <tr>
+          <td width="70px"><i><%= f.label t"views.users.Female"%></i></td>
+          <td width="70px"><i><%= f.label t"views.users.Male"%></i></td>
+          <td width="70px"><i><%= f.label t"views.users.Other"%></i></td>
+        </tr>
+        <tr>
+          <td><%= f.radio_button :sex, name: "sex", id: "1", values: "1" %></td>
+          <td><%= f.radio_button :sex, name: "sex", id: "2", values: "2" %></td>
+          <td><%= f.radio_button :sex, name: "sex", id: "3", values: "3" %></td>
+        </tr>
+      </table>
+
+      <%= f.label t"views.users.Phone"%>
+      <%= f.number_field :phone_number, class: "form-control", placeholder: t("views.users.Enter_phone_number")%>
+
+      <%= f.label t"views.users.password"%>
+      <%= f.password_field :password,class: "form-control", placeholder: t("views.users.Enter_password")%>
+
+      <%= f.label t"views.users.password_confirmation"%>
+      <%= f.password_field :password_confirmation, class: "form-control", placeholder: t("views.users.Enter_password_confirmation")%>
+
+      <%= f.submit t("views.users.Create_my_account"), class: "btn btn-primary" %>
+
+    <% end %>
+  </div>
+</div>

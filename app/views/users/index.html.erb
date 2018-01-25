@@ -1,0 +1,36 @@
+<h1><%= t"views.users.All_users"%></h1>
+<tbody>
+  <table class="table">
+      <tr>
+        <td><%= t"viwes.users.STT"%></td>
+        <td><%= t"views.users.name"%></td>
+        <td><%= t"views.users.email"%></td>
+        <td><%= t"views.users.phone"%></td>
+        <td><%= t"views.users.address"%></td>
+        <td><%= t"views.users.sex"%></td>
+        <td><%= t"views.users.option"%></td>
+      </tr>
+      <% sum = 0 %>
+  <%@users.each do |user|
+      if user.admin?
+        next
+      else %>
+        <tr>
+          <td><%= stt_for(sum +=1) %></td>
+          <td><%= user.name %></td>
+          <td><%= user.email %></td>
+          <td><%= user.phone_number %></td>
+          <td><%= user.address %></td>
+          <td></td>
+          <td><%= link_to t("views.users.delete"), user, method: :delete,
+           data: { confirm: t("views.users.sure") }%>
+          </td>
+        </tr>
+        <% sum = sum %>
+      <% end %>
+    <% end %>
+    <%= paginate @users, theme: "twitter-bootstrap-3"%>
+  </table>
+</tbody>
+
+

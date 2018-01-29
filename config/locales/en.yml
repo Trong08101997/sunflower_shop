@@ -30,4 +30,54 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  views:
+    sessions:
+      Log_in: "Log in"
+      email: "email"
+      password: "password"
+    users:
+      back: "back"
+      edit: "edit"
+      new_user: "new user"
+      update: "update"
+      success_update: "success update"
+      Update_profile: "Update profile"
+      delete: "delete"
+      Sign_up: "Sign up"
+      Enter_user_name: "Enter user name"
+      Enter_email: "Enter email"
+      Enter_address: "Enter address"
+      Sex: "Sex"
+      Female: "Female"
+      Male: "Male"
+      Other: "Other"
+      name: "Name"
+      email: "email"
+      address: "address"
+      Phone: "Phone"
+      password: "password"
+      password_confirmation: "password confirmation"
+      Enter_phone_number: "Enter phone number"
+      Enter_password: "Enter password"
+      Enter_password_confirmation: "Enter password confirmation"
+      Create_my_account: "Create my account"
+      option: "option"
+      All_users: "All users"
+      show: "show"
+      sure: "sure"
+      stt: "STT"
+      Hello: "Hello"
+    shared:
+      error: "error"
+      The_form_contains: "The form contains"
+  controllers:
+    sessions_controller:
+      error_login: "error login"
+    users_controller:
+      user_not_exited: "user not exited"
+      Register_success: "Register success"
+      Register_failed: "Register failed"
+      not_the_user: "not the user"
+    shared:
+      error: "error"
+      The_form_contains: "The form contains"
